@@ -43,6 +43,9 @@ export default function Footer() {
                 <Link to="/pools">Pool Gallery &amp; Types</Link>
               </li>
               <li>
+                <Link to="/get-a-quote">Get a Quote</Link>
+              </li>
+              <li>
                 <Link to="/about">About Us &amp; Leadership</Link>
               </li>
               <li>

@@ -5,10 +5,11 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToTop from './components/ScrollToTop';
 
-// Five Dedicated Pages
+// Six Dedicated Pages
 import Home from './pages/Home';
 import Services from './pages/Services';
 import SwimmingPools from './pages/SwimmingPools';
+import GetAQuote from './pages/GetAQuote';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
@@ -28,6 +29,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/pools" element={<SwimmingPools />} />
+            <Route path="/get-a-quote" element={<GetAQuote />} />
+            <Route path="/quote" element={<Navigate to="/get-a-quote" replace />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             {/* Catch-all redirect to Home */}
