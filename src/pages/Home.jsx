@@ -9,6 +9,10 @@ import { servicesData } from '../data/services';
 import { poolsData } from '../data/pools';
 
 export default function Home() {
+<<<<<<< HEAD
+
+=======
+>>>>>>> upstream/main
   // Preview first 6 services on homepage
   const previewServices = servicesData.slice(0, 6);
   // Preview first 4 pool designs on homepage

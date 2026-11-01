@@ -29,7 +29,11 @@ export default function Navbar() {
     { label: 'Home', path: '/' },
     { label: 'Services', path: '/services' },
     { label: 'Swimming Pools', path: '/pools' },
+<<<<<<< HEAD
+    { label: 'Get a Quote', path: '/get-a-quote' },
+=======
     { label: 'Get a Quote', path: '/quote' },
+>>>>>>> upstream/main
     { label: 'About Us', path: '/about' },
     { label: 'Contact Us', path: '/contact' }
   ];
