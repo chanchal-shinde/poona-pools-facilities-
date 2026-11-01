@@ -21,16 +21,17 @@ export const siteConfig = {
     displayPhone: '+91 99231 76194',
 
     // WhatsApp number (Digits only with country code, e.g., '919876543210')
+    // EDIT HERE: Change this value to update the WhatsApp number used across the whole site & quote form
     whatsapp: '919923176194',
 
     // Default prefilled message when a customer clicks WhatsApp
     whatsappPrefilledMessage: 'Hello Poona Pools Facilities, I am interested in your swimming pool services. Could you please share more details and arrange a consultation?',
 
     // Email address
-    email: '[BUSINESS EMAIL]',
+    email: 'poonapools@gmail.com',
 
     // Physical business address
-    address: '[BUSINESS ADDRESS]',
+    address: 'poonapools@gmail.com',
     cityState: 'Pune, Maharashtra, India',
 
     // Google Maps Embed URL
@@ -98,6 +99,81 @@ export const siteConfig = {
       description: 'Dependable routine maintenance, chemical testing, equipment servicing, and prompt technical support whenever you need assistance.'
     }
   ]
+};
+
+/**
+ * ============================================================================
+ * EDITABLE CONFIGURATION FOR QUOTE FORM & COST ESTIMATOR
+ * ============================================================================
+ * Student / Owner Note:
+ * Modify this section to change pool types, available services, or pricing rates.
+ * Everything is centralized here so you do not have to touch the calculation logic.
+ * ============================================================================
+ */
+
+/**
+ * Available Pool Types for both the Quote Form and Cost Estimator
+ * - id: unique internal identifier
+ * - label: human-readable name shown in dropdowns
+ * - multiplier: cost multiplier relative to residential base rate
+ */
+export const poolTypes = [
+  { id: 'residential', label: 'Residential', multiplier: 1.0 },
+  { id: 'commercial', label: 'Commercial', multiplier: 1.35 },
+  { id: 'infinity', label: 'Infinity Pool', multiplier: 1.5 }
+];
+
+/**
+ * Available Services for the Quote Form dropdown
+ * Matches the core services provided by Poona Pools Facilities
+ */
+export const quoteServices = [
+  'Swimming Pool Construction',
+  'Swimming Pool Maintenance',
+  'Filtration and Circulation Systems',
+  'Swimming Pool Renovation',
+  'Pool Waterproofing Solutions',
+  'Pool Equipment and Accessories',
+  'Custom Facility Consultation'
+];
+
+/**
+ * Swimming Pool Cost Estimator Pricing Configuration
+ *
+ * IMPORTANT PLACEHOLDER NOTICE:
+ * The pricing values below are SAMPLE PLACEHOLDERS provided for demonstration
+ * and indicative estimation purposes only. They DO NOT represent the company's
+ * actual rates. The website owner must replace them with authentic business rates
+ * before publishing.
+ */
+export const estimatorPricing = {
+  // Base indicative construction cost per cubic meter (m³) in INR
+  // (Placeholder rate - update with actual rate per m³ before publishing)
+  baseRatePerCubicMeter: 22000,
+
+  // Currency symbol displayed in UI
+  currencySymbol: '₹',
+
+  // Currency code for formatting
+  currencyCode: 'INR',
+
+  // Multipliers applied to base rate depending on pool complexity
+  typeMultipliers: {
+    residential: 1.0,
+    commercial: 1.35,
+    infinity: 1.5
+  },
+
+  // Measurement conversion constants
+  // 1 foot = 0.3048 meters
+  FEET_TO_METERS: 0.3048,
+
+  // 1 cubic meter = 1000 Litres of water
+  LITERS_PER_CUBIC_METER: 1000,
+
+  // Indicative estimate disclaimer text displayed to customers
+  disclaimer:
+    'Indicative Estimate Notice: This calculation provides an estimated budgetary guide based on standard dimensions. Actual project costs depend on site topography, soil conditions, civil excavation, premium tiling choices, pump horsepower, and filtration machinery. Contact Poona Pools Facilities for an authentic quotation.'
 };
 
 /**

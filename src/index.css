@@ -1363,3 +1363,27 @@ img {
     display: none;
   }
 }
+
+/* 21. FREE QUOTE FORM & COST ESTIMATOR STYLING */
+.form-control, .form-select {
+  border-color: var(--color-border);
+  color: var(--color-text-body);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--color-bright-blue);
+  box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
+  color: var(--color-deep-blue);
+}
+
+.form-check-input:checked {
+  background-color: var(--color-bright-blue);
+  border-color: var(--color-bright-blue);
+}
+
+.form-check-input:focus {
+  border-color: var(--color-bright-blue);
+  box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
+}
+

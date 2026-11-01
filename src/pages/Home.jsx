@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import HeroSlider from '../components/HeroSlider';
 import SectionHeading from '../components/SectionHeading';
 import ServiceCard from '../components/ServiceCard';
 import PoolCard from '../components/PoolCard';
+import CostEstimator from '../components/CostEstimator';
+import QuoteForm from '../components/QuoteForm';
 import { siteConfig, getWhatsAppLink, getPhoneLink } from '../config/siteConfig';
 import { servicesData } from '../data/services';
 import { poolsData } from '../data/pools';
 
 export default function Home() {
+  // State for prefilling quote form from cost estimator
+  const [estimatorPrefill, setEstimatorPrefill] = useState(null);
+
   // Preview first 6 services on homepage
   const previewServices = servicesData.slice(0, 6);
   // Preview first 4 pool designs on homepage
@@ -263,7 +268,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8. Contact Call-To-Action */}
+      {/* 8. Swimming Pool Cost Estimator */}
+      <CostEstimator onUseDimensions={setEstimatorPrefill} />
+
+      {/* 9. Request a Free Quote Inquiry Form */}
+      <QuoteForm prefilledData={estimatorPrefill} />
+
+      {/* 10. Contact Call-To-Action */}
       <section className="section-padding-sm bg-white" aria-labelledby="cta-heading">
         <div className="container">
           <div className="cta-banner">
