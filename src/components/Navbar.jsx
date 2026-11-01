@@ -29,6 +29,7 @@ export default function Navbar() {
     { label: 'Home', path: '/' },
     { label: 'Services', path: '/services' },
     { label: 'Swimming Pools', path: '/pools' },
+    { label: 'Get a Quote', path: '/quote' },
     { label: 'About Us', path: '/about' },
     { label: 'Contact Us', path: '/contact' }
   ];

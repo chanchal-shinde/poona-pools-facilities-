@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SectionHeading from '../components/SectionHeading';
-import CostEstimator from '../components/CostEstimator';
-import QuoteForm from '../components/QuoteForm';
 import { siteConfig, getWhatsAppLink, getPhoneLink } from '../config/siteConfig';
 
 export default function Contact() {
-  // State to hold dimension data transferred from the Cost Estimator into the Quote Form
-  const [estimatorPrefill, setEstimatorPrefill] = useState(null);
-
   const isMapConfigured = Boolean(
     siteConfig.contact.googleMapsEmbedUrl &&
     siteConfig.contact.googleMapsEmbedUrl.startsWith('https://')
@@ -167,12 +162,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-      {/* Swimming Pool Cost Estimator Section */}
-      <CostEstimator onUseDimensions={setEstimatorPrefill} />
-
-      {/* Free Quote Inquiry Form Section */}
-      <QuoteForm prefilledData={estimatorPrefill} />
 
       {/* Google Maps / Location Section */}
       <section className="section-padding bg-light-blue" aria-labelledby="map-heading">

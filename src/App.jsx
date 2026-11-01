@@ -5,10 +5,11 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToTop from './components/ScrollToTop';
 
-// Five Dedicated Pages
+// Dedicated Application Pages
 import Home from './pages/Home';
 import Services from './pages/Services';
 import SwimmingPools from './pages/SwimmingPools';
+import GetQuote from './pages/GetQuote';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
@@ -28,6 +29,9 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/pools" element={<SwimmingPools />} />
+            <Route path="/quote" element={<GetQuote />} />
+            <Route path="/get-quote" element={<Navigate to="/quote" replace />} />
+            <Route path="/get-a-quote" element={<Navigate to="/quote" replace />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             {/* Catch-all redirect to Home */}
@@ -38,7 +42,7 @@ export default function App() {
         {/* Persistent Corporate Footer */}
         <Footer />
 
-        {/* Floating WhatsApp Quick-Contact Button (Visible across all 5 pages) */}
+        {/* Floating WhatsApp Quick-Contact Button (Visible across all pages) */}
         <WhatsAppButton />
       </div>
     </BrowserRouter>
